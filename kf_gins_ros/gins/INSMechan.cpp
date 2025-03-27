@@ -54,7 +54,7 @@ void INSMechan::VelocityUpdate(IMU &imupre, IMU &imucur, PVA &pvapre, PVA &pvacu
     qen=qee*qen*qnn;
 
     Vector3d midpos;
-    midpos[2]=pvapre.blh[2] - midpos[2]*imucur.dt/2;
+    midpos[2]=pvapre.blh[2] - midvel[2]*imucur.dt/2;
     midpos = Earth::blh(qen, midpos[2]);
 
     //4、重新计算速度各项分量
