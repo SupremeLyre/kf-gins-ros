@@ -1,0 +1,5 @@
+<launch>
+    <node name="ginsprocess" pkg="gins" type="gins_node" args="$(find gins)/config/gins.yaml"/>
+    <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find gins)/config/gins_rviz_config.rviz"/>
+    
+</launch>
